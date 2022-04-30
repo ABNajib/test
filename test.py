@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 st.title('Uber pickups in NYC')
-
 DATE_COLUMN = 'date/time'
 DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
          'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
@@ -19,3 +18,5 @@ data_load_state = st.text('Loading data...')
 data = load_data(10000)
 # Notify the reader that the data was successfully loaded.
 data_load_state.text('Loading data...done!')
+st.subheader('Raw data')
+st.write(data)
